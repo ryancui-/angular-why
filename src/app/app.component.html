@@ -1,4 +1,13 @@
-<comp-b [(twbind)]="aText"></comp-b>
+<header>Open dev tool to see more infomation</header>
 
-<button (click)="changeAText()">Change Text</button>
+<aside>
+  <a class="menu-item"
+     *ngFor="let menu of menus"
+     [routerLink]="menu.url">
+    {{menu.name}}
+  </a>
+</aside>
 
+<main>
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,53 @@
+$header-height: 50px;
+$aside-width: 220px;
+$menu-height: 50px;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  line-height: $header-height;
+  background-color: #cecece;
+  text-align: center;
+  font-size: 18px;
+}
+
+aside {
+  position: fixed;
+  top: $header-height;
+  bottom: 0;
+  left: 0;
+  width: $aside-width;
+  overflow-y: auto;
+  background-color: black;
+
+  .menu-item {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+    height: $menu-height;
+    line-height: $menu-height;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      background-color: #fefe00;
+    }
+  }
+}
+
+main {
+  position: fixed;
+  top: $header-height;
+  left: $aside-width;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
