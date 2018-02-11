@@ -24,17 +24,17 @@ export class SubAComponent implements OnInit, OnChanges,
 
   constructor() {
     console.log('A: constructor');
-    this.logInput();
+    // this.logInput();
   }
 
   ngOnInit() {
     console.log('A: ngOnInit');
-    this.logInput();
+    // this.logInput();
   }
 
   ngOnChanges() {
     console.log('A: ngOnChanges');
-    this.logInput();
+    // this.logInput();
   }
 
   ngAfterViewInit() {

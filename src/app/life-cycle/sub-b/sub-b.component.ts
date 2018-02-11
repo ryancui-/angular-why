@@ -5,6 +5,7 @@ import {
   AfterViewInit,
   Component,
   DoCheck,
+  Input,
   OnChanges,
   OnInit
 } from '@angular/core';
@@ -17,6 +18,8 @@ import {
 export class SubBComponent implements OnInit, OnChanges,
   AfterViewInit, AfterViewChecked,
   AfterContentInit, AfterContentChecked, DoCheck {
+
+  @Input() obj;
 
   constructor() {
     console.log('B: constructor');
