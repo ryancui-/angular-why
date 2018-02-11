@@ -1,6 +1,7 @@
-<button (click)="changeA()">Change Input A</button>
-<button (click)="changeBValue()">Change Input B.value</button>
-<button (click)="doNothing()">Do Nothing</button>
+<button class="btn" (click)="changeA()">Change Input A</button>
+<button class="btn" (click)="changeBValue()">Change Input B.value</button>
+<button class="btn" (click)="doNothing()">Do Nothing</button>
+<input class="input" type="text">
 
 <div class="sub-component">
   <sub-a [count]="toA"></sub-a>
@@ -9,5 +10,5 @@
   </sub-b>
 </div>
 
-<input type="text">
+
 
