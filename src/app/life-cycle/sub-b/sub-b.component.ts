@@ -3,6 +3,8 @@ import {
   AfterContentInit,
   AfterViewChecked,
   AfterViewInit,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   DoCheck,
   Input,
@@ -13,7 +15,8 @@ import {
 @Component({
   selector: 'sub-b',
   templateUrl: './sub-b.component.html',
-  styleUrls: ['./sub-b.component.scss']
+  styleUrls: ['./sub-b.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubBComponent implements OnInit, OnChanges,
   AfterViewInit, AfterViewChecked,
@@ -21,7 +24,7 @@ export class SubBComponent implements OnInit, OnChanges,
 
   @Input() obj;
 
-  constructor() {
+  constructor(private changeDetector: ChangeDetectorRef) {
     console.log('B: constructor');
   }
 

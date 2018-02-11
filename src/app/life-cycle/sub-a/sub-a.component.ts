@@ -3,6 +3,7 @@ import {
   AfterContentInit,
   AfterViewChecked,
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   DoCheck,
   Input,
@@ -13,7 +14,8 @@ import {
 @Component({
   selector: 'sub-a',
   templateUrl: './sub-a.component.html',
-  styleUrls: ['./sub-a.component.scss']
+  styleUrls: ['./sub-a.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubAComponent implements OnInit, OnChanges,
   AfterViewInit, AfterViewChecked,

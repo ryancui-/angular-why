@@ -19,7 +19,7 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
   AfterContentInit, AfterContentChecked, DoCheck {
 
   toA: number;
-  toB: object;
+  toB: any;
 
   constructor() {
     console.log('Page: constructor');
@@ -59,6 +59,10 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
 
   changeA() {
     this.toA = Math.random();
+  }
+
+  changeBValue() {
+    this.toB.value = Math.random();
   }
 
   doNothing() {
