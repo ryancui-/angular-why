@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CompBComponent} from './comp-b.component';
+import {LifeCyclePageComponent} from './comp-b.component';
 
 describe('CompBComponent', () => {
-  let component: CompBComponent;
-  let fixture: ComponentFixture<CompBComponent>;
+  let component: LifeCyclePageComponent;
+  let fixture: ComponentFixture<LifeCyclePageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CompBComponent]
+      declarations: [LifeCyclePageComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CompBComponent);
+    fixture = TestBed.createComponent(LifeCyclePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
