@@ -9,6 +9,8 @@ import {LifeCyclePageComponent} from './life-cycle/life-cycle-page/life-cycle-pa
 import {SubAComponent} from './life-cycle/sub-a/sub-a.component';
 import {SubBComponent} from './life-cycle/sub-b/sub-b.component';
 import {SubCComponent} from './life-cycle/sub-c/sub-c.component';
+import {RouteReusePageComponent} from './route-reuse/route-reuse-page/route-reuse-page.component';
+import {Store} from './store';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {SubCComponent} from './life-cycle/sub-c/sub-c.component';
     LifeCyclePageComponent,
     SubAComponent,
     SubBComponent,
-    SubCComponent
+    SubCComponent,
+    RouteReusePageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import {SubCComponent} from './life-cycle/sub-c/sub-c.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [Store],
   bootstrap: [AppComponent]
 })
 export class AppModule {

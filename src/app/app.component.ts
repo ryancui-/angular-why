@@ -10,10 +10,10 @@ export class AppComponent {
     name: 'Index',
     url: '/'
   }, {
-    name: 'Component Life Time',
+    name: 'Component Life Cycle',
     url: '/life-cycle'
   }, {
-    name: 'Two way binding',
-    url: '/binding'
+    name: 'Route Reuse',
+    url: '/route-reuse'
   }];
 }
