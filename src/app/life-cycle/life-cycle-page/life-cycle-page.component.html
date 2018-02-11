@@ -1,1 +1,11 @@
-<sub-a [count]="toA"></sub-a>
+<button (click)="changeA()">Change Input A</button>
+<button (click)="doNothing()">Do Nothing</button>
+
+<div class="sub-component">
+  <sub-a [count]="toA"></sub-a>
+  <sub-b>
+    <p>123123123</p>
+  </sub-b>
+</div>
+
+

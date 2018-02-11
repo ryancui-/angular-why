@@ -56,4 +56,12 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
   ngDoCheck() {
     console.log('Page: ngDoCheck');
   }
+
+  changeA() {
+    this.toA = Math.random();
+  }
+
+  doNothing() {
+    // Do nothing
+  }
 }
