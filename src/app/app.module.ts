@@ -11,6 +11,7 @@ import {SubBComponent} from './life-cycle/sub-b/sub-b.component';
 import {SubCComponent} from './life-cycle/sub-c/sub-c.component';
 import {RouteReusePageComponent} from './route-reuse/route-reuse-page/route-reuse-page.component';
 import {Store} from './store';
+import {SubA1Component} from './life-cycle/sub-a1/sub-a1.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {Store} from './store';
     SubAComponent,
     SubBComponent,
     SubCComponent,
-    RouteReusePageComponent
+    RouteReusePageComponent,
+    SubA1Component
   ],
   imports: [
     BrowserModule,

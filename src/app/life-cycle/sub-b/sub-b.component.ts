@@ -22,6 +22,7 @@ export class SubBComponent implements OnInit, OnChanges,
   AfterViewInit, AfterViewChecked,
   AfterContentInit, AfterContentChecked, DoCheck {
 
+  _value;
   @Input() obj;
 
   constructor(private changeDetector: ChangeDetectorRef) {
@@ -29,15 +30,16 @@ export class SubBComponent implements OnInit, OnChanges,
   }
 
   ngOnInit() {
-    console.log('B: ngOnInit');
+    // console.log('B: ngOnInit');
   }
 
   ngOnChanges() {
+    this._value = this.obj.value;
     console.log('B: ngOnChanges');
   }
 
   ngAfterViewInit() {
-    console.log('B: ngAfterViewInit');
+    // console.log('B: ngAfterViewInit');
   }
 
   ngAfterViewChecked() {
@@ -45,14 +47,18 @@ export class SubBComponent implements OnInit, OnChanges,
   }
 
   ngAfterContentInit() {
-    console.log('B: ngAfterContentInit');
+    // console.log('B: ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log('B: ngAfterContentChecked');
+    // console.log('B: ngAfterContentChecked');
   }
 
   ngDoCheck() {
+    if (this._value !== this.obj.value) {
+      this._value = this.obj.value;
+      this.changeDetector.markForCheck();
+    }
     console.log('B: ngDoCheck');
   }
 

@@ -4,6 +4,7 @@ import {
   AfterViewChecked,
   AfterViewInit,
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   DoCheck,
   Input,
@@ -21,26 +22,33 @@ export class SubAComponent implements OnInit, OnChanges,
   AfterViewInit, AfterViewChecked,
   AfterContentInit, AfterContentChecked, DoCheck {
 
-  @Input() count;
-  @Input() total;
+  local;
+  local2;
 
-  constructor() {
+  @Input() observaeble;
+
+  constructor(private changeDetector: ChangeDetectorRef) {
     console.log('A: constructor');
-    // this.logInput();
   }
 
   ngOnInit() {
     console.log('A: ngOnInit');
-    // this.logInput();
+    this.observaeble.subscribe(value => {
+      this.local2 = value;
+      // this.changeDetector.markForCheck();
+    });
+  }
+
+  change() {
+    this.local = Math.random();
   }
 
   ngOnChanges() {
     console.log('A: ngOnChanges');
-    // this.logInput();
   }
 
   ngAfterViewInit() {
-    console.log('A: ngAfterViewInit');
+    // console.log('A: ngAfterViewInit');
   }
 
   ngAfterViewChecked() {
@@ -48,19 +56,14 @@ export class SubAComponent implements OnInit, OnChanges,
   }
 
   ngAfterContentInit() {
-    console.log('A: ngAfterContentInit');
+    // console.log('A: ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log('A: ngAfterContentChecked');
+    // console.log('A: ngAfterContentChecked');
   }
 
   ngDoCheck() {
     console.log('A: ngDoCheck');
-  }
-
-  logInput() {
-    console.log('count is ', this.count);
-    console.log('total is ', this.total);
   }
 }

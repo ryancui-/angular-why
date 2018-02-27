@@ -8,6 +8,7 @@ import {
   OnChanges,
   OnInit
 } from '@angular/core';
+import {Subject} from 'rxjs/Subject';
 
 @Component({
   selector: 'life-cycle-page',
@@ -18,7 +19,8 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
   AfterViewInit, AfterViewChecked,
   AfterContentInit, AfterContentChecked, DoCheck {
 
-  toA: number;
+  // toA: number;
+  toA = new Subject();
   toB: any;
 
   constructor() {
@@ -26,11 +28,11 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
   }
 
   ngOnInit() {
-    this.toA = 100;
+    // this.toA = 100;
     this.toB = {
       key: 'key', value: 'value'
     };
-    console.log('Page: ngOnInit');
+    // console.log('Page: ngOnInit');
   }
 
   ngOnChanges() {
@@ -38,7 +40,7 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
   }
 
   ngAfterViewInit() {
-    console.log('Page: ngAfterViewInit');
+    // console.log('Page: ngAfterViewInit');
   }
 
   ngAfterViewChecked() {
@@ -46,11 +48,11 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
   }
 
   ngAfterContentInit() {
-    console.log('Page: ngAfterContentInit');
+    // console.log('Page: ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log('Page: ngAfterContentChecked');
+    // console.log('Page: ngAfterContentChecked');
   }
 
   ngDoCheck() {
@@ -58,7 +60,7 @@ export class LifeCyclePageComponent implements OnInit, OnChanges,
   }
 
   changeA() {
-    this.toA = Math.random();
+    this.toA.next(Math.random());
   }
 
   changeBValue() {

@@ -23,7 +23,7 @@ export class SubCComponent implements OnInit, OnChanges,
   }
 
   ngOnInit() {
-    console.log('C: ngOnInit');
+    // console.log('C: ngOnInit');
   }
 
   ngOnChanges() {
@@ -31,7 +31,7 @@ export class SubCComponent implements OnInit, OnChanges,
   }
 
   ngAfterViewInit() {
-    console.log('C: ngAfterViewInit');
+    // console.log('C: ngAfterViewInit');
   }
 
   ngAfterViewChecked() {
@@ -39,11 +39,11 @@ export class SubCComponent implements OnInit, OnChanges,
   }
 
   ngAfterContentInit() {
-    console.log('C: ngAfterContentInit');
+    // console.log('C: ngAfterContentInit');
   }
 
   ngAfterContentChecked() {
-    console.log('C: ngAfterContentChecked');
+    // console.log('C: ngAfterContentChecked');
   }
 
   ngDoCheck() {
